@@ -1130,6 +1130,11 @@ line-height: 20px;
   padding: 20px 0 20px 0;
 }
 }
+@media only screen and (max-width: 415px){
+	.header {
+  height: 50vh;
+}
+}
 @media only screen and (max-width: 380px){
 	.card-box{
 	margin: 0 auto;
@@ -1173,6 +1178,9 @@ line-height: 20px;
 @media only screen and (max-width: 376px){
 	.topber-contact ul li i {
   margin-right: 0px;
+}
+.header {
+  height: 50vh;
 }
 }
 
