@@ -62,7 +62,7 @@ p{
 	.header{
 		height: 92vh;
 		background-position: center;
-		background-size: 100% 100%;
+		background-size: cover !important;
 		background-image: url('./assact/img/header-bg.png');
 	}
 	.header-content{
