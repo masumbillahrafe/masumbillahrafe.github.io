@@ -100,6 +100,24 @@ text-align: justify;
 	background-color: #d14b4a;
 	border-radius:  20px;
 }
+.futter h4{
+	font-size: 30px;
+	text-transform: uppercase;
+	margin-bottom: 0;
+}
+.futter p{
+	margin-bottom: 0;
+}
+.futter ul{
+	list-style: none;
+}
+.futter ul li a{
+	text-decoration: none;
+	color: #fff;
+}
+.futter ul li a i{
+	margin-right: 10px;
+}
 
 
 .none{
