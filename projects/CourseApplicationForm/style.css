@@ -1,0 +1,22 @@
+body {
+  background-image: url("mybg.jpeg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+.main {
+  display: flex;
+  justify-content: flex-end;
+}
+.right {
+  /* border: 1px solid; */
+  width: 60%;
+  background-color: #faf9f6;
+  padding: 10px;
+  box-shadow: 0px 0px 5px 5px #393737;
+  border-radius: 12px;
+}
+.heading {
+  text-align: center;
+  border-bottom: 1px solid #a29e9e;
+  margin-bottom: 30px;
+}
