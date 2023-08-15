@@ -1,0 +1,219 @@
+body {
+  background-image: url("mybg.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-family: "Orbitron", sans-serif;
+  background-attachment: fixed;
+}
+.main {
+  display: flex;
+  justify-content: center;
+}
+.right {
+  width: 60%;
+  background-color: rgba(195, 190, 190, 0.7);
+  padding: 10px;
+  box-shadow: 0px 0px 36px 12px #393737;
+  border-radius: 12px;
+}
+.heading {
+  text-align: center;
+  border-bottom: 2px solid #5c5a5a;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+}
+.star {
+  color: red;
+  margin-left: 3px;
+}
+.left-text {
+  margin-left: 10px;
+  margin-right: 120px;
+}
+.name .firstname {
+  margin-left: 55px;
+}
+.date .dmy {
+  margin-left: 35px;
+}
+.gender .male {
+  margin-left: 80px;
+}
+.gender .female {
+  margin-left: 30px;
+}
+.genderclass {
+  width: 20px !important;
+}
+.education .selecttor {
+  margin-left: 56px;
+}
+.mail .mailbox {
+  margin-left: 96px;
+}
+.number .num {
+  margin-left: 2px;
+}
+.address .ad-1 {
+  margin-left: 68px;
+  margin-bottom: 30px;
+}
+.address .ad-3 {
+  margin-left: 295px;
+}
+
+.name,
+.date,
+.gender,
+.education,
+.mail,
+.number,
+.address {
+  margin-bottom: 30px;
+  /* width: 28%; */
+}
+input,
+.selecttor {
+  border: none;
+  background-color: transparent;
+  border-bottom: 1px solid #605f5f;
+  width: 28%;
+  padding: 5px;
+}
+.firstname,
+.ad-1,
+.ad-3 {
+  margin-right: 15px;
+}
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+input:focus {
+  /* border: none; */
+  outline: none;
+  font-family: "Orbitron", sans-serif;
+}
+form {
+  font-family: "Orbitron", sans-serif;
+}
+button {
+  /* =: m; */
+  margin: 0 auto;
+  display: block;
+  font-size: 20px;
+  padding: 10px 40px;
+  text-transform: uppercase;
+  font-family: "Orbitron", sans-serif;
+  background-image: linear-gradient(#d0f27e, #46f487);
+  border: 1px solid dimgray;
+  border-radius: 7px;
+  cursor: pointer;
+  font-weight: 700;
+  transition: 0.5s;
+}
+button:hover {
+  transition: 0.5s;
+  background-image: linear-gradient(#46f487, #d0f27e);
+  letter-spacing: 5px;
+}
+.last {
+  font-size: 13px;
+  text-align: center;
+}
+.last a {
+  text-transform: none;
+}
+
+@media only screen and (max-width: 1284px) {
+  .right {
+    width: 80%;
+  }
+}
+@media only screen and (max-width: 973px) {
+  .right {
+    width: 95%;
+  }
+}
+@media only screen and (max-width: 819px) {
+  .left-text {
+    margin-right: 50px;
+  }
+  .address .ad-3 {
+    margin-left: 227px;
+  }
+  button {
+    font-size: 16px;
+  }
+}
+@media only screen and (max-width: 657px) {
+  .left-text {
+    margin-right: 20px;
+  }
+  .address .ad-3 {
+    margin-left: 195px;
+  }
+}
+@media only screen and (max-width: 579px) {
+  .left-text {
+    display: block;
+    margin-bottom: 10px;
+  }
+  .name .firstname {
+    margin-left: 104px;
+  }
+  .date .dmy {
+    margin-left: 107px;
+  }
+  .gender .male {
+    margin-left: 108px;
+  }
+  .education .selecttor {
+    margin-left: 109px;
+  }
+  .mail .mailbox {
+    margin-left: 109px;
+  }
+  .number .num {
+    margin-left: 111px;
+  }
+  .address .ad-1 {
+    margin-left: 115px;
+  }
+  .address .ad-3 {
+    margin-left: 118px;
+  }
+}
+@media only screen and (max-width: 423px) {
+  .name .firstname {
+    margin-left: 10px;
+  }
+  .date .dmy {
+    margin-left: 10px;
+  }
+  .gender .male {
+    margin-left: 10px;
+  }
+  .education .selecttor {
+    margin-left: 10px;
+  }
+  .mail .mailbox {
+    margin-left: 10px;
+  }
+  .number .num {
+    margin-left: 10px;
+  }
+  .address .ad-1 {
+    margin-left: 10px;
+  }
+  .address .ad-3 {
+    margin-left: 10px;
+  }
+  input,
+  .selecttor {
+    width: 41%;
+  }
+  .last {
+    font-size: 11px;
+    text-align: center;
+  }
+}
