@@ -1,0 +1,27 @@
+body{background-image: url(background_in_space.gif); font-family: 'Kalam', cursive;	overflow: hidden;}
+div {width: 500px; height: 500px; background-image: linear-gradient(#4a07b4, #e728b1);position: relative;animation-name: example;animation-duration: 40s;animation-timing-function: linear;animation-delay: .4s;animation-iteration-count: infinite;animation-direction: alternate; border-radius: 20%;box-shadow: 0 0 20px 0px #fff;border: 1px solid #fff;opacity: 0.7;margin: 0 auto;top: 45%;position: relative;}
+@keyframes example {
+  100% {background-color:green; top: 46%;left: 0;transform: rotate(360deg); }
+}
+h1 {position: absolute;	top: 50%;	left: 50%;	transform: translate(-50%);	color: #fff;}
+@media only screen and (max-width: 667px){
+		h1{
+			width: 100%;
+			text-align: center;
+		}
+} 
+
+@media only screen and (max-width: 667px){
+		h1{
+			top: 38%;
+		}
+		div{
+			width: 400px;
+  			height: 400px;
+		}
+} 
+@media only screen and (max-width: 370px){
+		h1{
+			font-size: 25px;
+		}
+} 
