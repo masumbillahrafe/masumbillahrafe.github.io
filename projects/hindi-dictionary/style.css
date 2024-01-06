@@ -61,6 +61,7 @@ p{
 .popup .popup-close:hover{
     cursor: pointer;
 }
+
 .popup .popup-close::hover .popup-close .one{
     color: red;
 }
@@ -130,7 +131,7 @@ p{
     transform: translateX(-50%);
 }
 .main-manu{
-    width: 900px;
+    max-width: 900px;
     height: 100px;
     border-radius: 30px;
     background: rgba(30, 30, 30, 0.60);
@@ -152,6 +153,7 @@ p{
     outline: transparent;
     border: transparent;
     width: 100%;
+    color: #fff;
 }
 .search-box input:focus {
     color: #fff;
@@ -230,9 +232,16 @@ p{
     height: 450px;
     max-width: 502px;
     margin-bottom: 60px;
+    transition: .4s;
+}
+.third-section .content-box:hover{
+    transform: translateY(-10px);
 }
 .third-section .content-box .sound{
     margin: 25px 0;
+}
+.sounds .sub-hadding:hover{ 
+  color: #FFCA60 !important;
 }
 .third-section .content-box .sound img{
     margin-left: 15px;
@@ -241,6 +250,13 @@ p{
     font-size: 30px;
     line-height: 36px;
     color: #1E1E1D;
+}
+.hadding a{
+    color: #1E1E1D;
+    transition: .3s;
+}
+.hadding a:hover{
+    color: #FECA61;
 }
 .third-section .content-box .sub-hadding{
     font-size: 28px;
@@ -265,7 +281,7 @@ p{
     margin-right: 20px;
 }
 .add-section{
-    height: 100px;
+    padding: 50px 0;
 }
 .footer{
     background-color:rgba(54, 53, 56, 0.50);
@@ -396,6 +412,7 @@ p{
 }
 .sentence-examples .text-box{
     max-width: 1050px;
+    width: 100%;
     border-radius: 10px;
     background-color: #E2DDF6;
     box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.25);
@@ -437,4 +454,416 @@ p{
 }
 .random-history{
     background-color: transparent;
+}
+.footer{
+    display: block;
+}
+.footer2{
+    display: none;
+}
+
+
+/* responsive */
+@media only screen and (max-width: 1200px){
+    .banner-image{
+        width: 390.458px;
+        margin-top: 8%;
+    }
+}
+
+@media only screen and (max-width: 992px){
+    .banner-image{
+        width: 390.458px;
+        margin-top: 8%;
+    }
+    .banner-section {
+        padding-top: 0px;
+    }
+    .main-manu {
+        padding: 8px 20px;
+    }
+    .banner-section .banner-image img{
+        width: 250px;
+        margin-top: 32px;
+    }
+    .hadding {
+        font-size: 30px;
+        line-height: 36px;
+      }
+      .banner-section .hadding {
+        width: calc(100% + 50%);
+    }
+    .title {
+        font-size: 15px;
+        line-height: 25px;
+      }
+      .random-btns .btn button {
+        padding: 14px 20px;
+        margin-right: 35px;
+        font-size: 18px;
+    }
+    .main-manu {
+        margin-bottom: 45px;
+    }
+    .random-section {
+        padding: 50px 0;
+    }
+    .random-section .hadding {
+        font-size: 30px;
+        margin-bottom: 36px;
+    }
+    .third-section {
+        padding: 70px 0 10px 0;
+    }
+    .third-section .content-box .hadding {
+        font-size: 26px;
+        line-height: 32px;
+        text-align: center;
+    }
+    .third-section .content-box .sub-hadding {
+        font-size: 24px;
+        line-height: 30px;
+        text-align: center;
+    }
+    .third-section .content-box .sound a{
+        justify-content: center;
+    }
+    .third-section .content-box .content {
+        text-align: center;
+        font-size: 20px;
+        line-height: 26px;
+    }
+    .third-section .random-btns .btn button {
+        padding: 10px 10px;
+        margin-right: 35px;
+        font-size: 18px;
+    }
+    .third-section .content-box .random-btns .btn button {
+        background-color: #fff;
+        margin-right: 15px;
+    }
+    .popup .menu a {
+        font-size: 30px;
+        line-height: 36px;
+        margin-bottom: 24px;
+    }
+    .history-banner-section {
+        padding-top: 0;
+    }
+    .history-banner-section .my-container::after {
+        top: 101px;
+        right: 20px;
+    }
+    .main-banner .hadding {
+        font-size: 32px;
+        line-height: 38px;
+        margin-left: 185px;
+    }
+    .main-banner .sound-text {
+        font-size: 32px;
+        line-height: 38px;
+        margin-left: 188px;
+    }
+    .history-banner-section .banner-image {
+        left: 58%;
+    }
+    .share .all-mediya span i {
+        font-size: 30px;
+        height: 70px;
+        width: 70px;
+        margin-right: 30px;
+    }
+    .share .hadding {
+        font-size: 28px;
+        line-height: 32px;
+        margin-bottom: 20px;
+    }
+    .sentence-examples .text-box {
+        max-width: 730px;
+        top: -85px;
+    }
+    .sentence-examples .text-box p {
+        font-size: 22px;
+        line-height: 26px;
+    }
+    .sentence-examples .hadding {
+        color: #212529;
+        font-size: 32px;
+        line-height: 38px;
+        margin-bottom: 20px;
+    }
+    .sentence-examples ul li {
+        font-size: 22px;
+        line-height: 30px;
+    }
+    .tv-series-examples .hadding {
+        font-size: 32px;
+        line-height: 38px;
+    }
+}
+@media only screen and (max-width: 768px){
+    .banner-section {
+        padding-top: 20px;
+    }
+    .main-manu .search-box{
+        visibility: hidden;
+    }
+    .main-manu{
+        height: auto;
+    }
+    .main-manu .logo {
+        width: 150px;
+    }
+    .banner-section .hadding {
+        width: 100%;
+    }
+    .banner-image-responsive{
+        text-align: center;
+    }
+    .banner-image {
+        width: 250px;
+        margin: 0 auto;
+    }
+    .banner-section::after {
+        top: 98px;
+        opacity: 0.4;
+    }
+    .banner-section {
+        padding-bottom: 50px;
+    }
+    .banner-section .banner-image img {
+        margin-top: 0;
+    }
+    .random-section .random-btns .btn{
+        width: calc(100% + 40%);
+        margin-left: -150px;
+    }
+    .random-btns{
+        margin-top: 50px;
+    }
+    .random-section .hadding {
+        margin-bottom: 25px;
+    }
+    .align-items-center {
+        align-items: unset !important;
+    }
+    .footer p {
+        text-align: center;
+    }
+    .history-banner-section {
+        padding-top: 20px;
+    }
+    .history-banner-section .my-container::after {
+        content: "" !important;
+        top: 69px !important;
+        right: 42px !important;
+        height: 50px !important;
+        width: 50px !important;
+        background-color: #5A45AA !important;
+        filter: drop-shadow(-3px 3px 10px rgba(0, 0, 0, 0.25));
+        border-radius: 50% !important;
+    }   
+    .main-banner .hadding {
+        font-size: 32px;
+        line-height: 38px;
+        margin-left: 20%;
+    }
+    .banner-ellipse {
+        display: none;
+    }
+    .history-banner-section .my-container::before {
+        position: absolute;
+        content: "" !important;
+        height: 90px !important;
+        width: 90px !important;
+        border-radius: 50%;
+        background-color: #4FC0A7 !important;
+        bottom: -140px;
+        left: 25px;
+        filter: drop-shadow(-3px 3px 10px rgba(0, 0, 0, 0.25));
+    }
+    .history-banner-section .banner-image {
+        left: 70%;
+    }
+    .share .all-mediya span i {
+        font-size: 25px;
+        height: 60px;
+        width: 60px;
+        margin-right: 20px;
+    }
+}
+@media only screen and (max-width: 576px){
+    .main-manu .menu-bar div {
+        height: 4px;
+    }
+    .main-manu .menu-bar .one {
+        width: 30px;
+    }
+    .main-manu .menu-bar .three {
+        width: 30px;
+    }
+    .main-manu .menu-bar .tow {
+        width: 40px;
+    }
+    .main-manu .menu-bar:hover .one{
+        width: 40px;
+    }
+    .main-manu .menu-bar:hover .three{
+        width: 40px;
+    }
+    .hadding {
+        font-size: 28px;
+        line-height: 34px;
+        text-align: center;
+    }
+    .main-manu {
+        margin-bottom: 30px;
+    }
+    .title {
+        text-align: center;
+    }
+    .random-image{
+        width: 200px;
+        margin: 0 auto;
+    }
+    .random-section .random-btns .btn {
+        width: 100%;
+        margin-left: 0;
+        text-align: center;
+    }
+    .random-btns .btn button {
+        padding: 10px 10px;
+        margin-right: 10px;
+        font-size: 14px;
+        line-height: 20px;
+        margin-bottom: 15px;
+    }
+    .random-btns .btn button:hover {
+        box-shadow: 5px 5px #000;
+    }
+    .third-section .content-box .hadding {
+        font-size: 22px;
+        line-height: 28px;
+    }
+    .third-section .content-box .sub-hadding {
+        font-size: 20px;
+        line-height: 36px;
+    }
+    .third-section .content-box .content {
+        font-size: 16px;
+        line-height: 22px;
+    }
+    .third-section .content-box {
+        padding: 10px;
+        height: 400px;
+        margin-bottom: 30px;
+    }
+    .random-btns .btn {
+        text-align: center;
+    }
+    .third-section .random-btns .btn button {
+        font-size: 14px;
+        line-height: 20px;
+    }
+    .footer{
+        display: none;
+    }
+    .footer2{
+        display: block;
+    }
+    .footer2 .f-menu{
+        margin-bottom: 25px;
+    }
+    .popup .popup-top img {
+        max-width: 150px;
+    }
+    .popup .overlay {
+        padding-top: 50px;
+    }
+    .popup .popup-top {
+        margin-bottom: 50px;
+    }
+    .popup .menu a {
+        font-size: 25px;
+        line-height: 31px;
+        margin-bottom: 20px;
+    }
+    .popup .menu .search-box {
+        max-width: 100%;
+        margin: 0 auto;
+        margin-top: 70px;
+    }
+    .main-banner .hadding {
+        font-size: 28px;
+        line-height: 34px;
+        margin-left: 0;
+    }
+    .main-manu {
+        margin-bottom: 40px;
+    }
+    .history-banner-section .my-container::after {
+        top: 66px !important;
+        right: 21px !important;
+        height: 40px !important;
+        width: 40px !important;
+    }
+    .main-banner .sound-text {
+        font-size: 28px;
+        line-height: 34px;
+        margin-left: 0;
+    }
+    .sound-text-div{
+        justify-content: center;
+    }
+    .history-banner-section .banner-image {
+        left: 68%;
+        bottom: 38px;
+        width: 200px;
+    }
+    .share-section {
+        margin-top: 40px;
+        margin-bottom: 135px;
+    }
+    .share .all-mediya span i {
+        font-size: 25px;
+        height: 0;
+        width: 0;
+        margin-right: 40px;
+        border: 0px solid #212529;
+    }
+    .share .hadding {
+        margin-bottom: 30px;
+        font-size: 20px;
+        line-height: 27px;
+    }
+    .share .all-mediya span i:hover {
+        transform: translateY(-5px);
+        transition: .4s;
+    }
+    .all-mediya{
+        margin-left: 34px;
+    }
+    .sentence-examples .text-box {
+        padding: 30px 10px;
+    }
+    .sentence-examples .text-box p {
+        font-size: 16px;
+        line-height: 23px;
+    }
+    .sentence-examples .hadding {
+        font-size: 20px;
+        line-height: 26px;
+        margin-bottom: 20px;
+    }
+    .sentence-examples ul li {
+        font-size: 16px;
+        line-height: 22px;
+    }
+    .sentence-examples {
+        padding-top: 330px;
+    }
+    .tv-series-examples .hadding {
+        font-size: 20px;
+        line-height: 26px;
+    }
 }
