@@ -260,7 +260,6 @@ p{
 }
 .third-section .content-box .sub-hadding{
     font-size: 28px;
-    font-weight: 400;
     line-height: 34px;
     color: #1E1E1D;
 }
@@ -445,12 +444,46 @@ p{
 
 .tv-series-examples{
     padding-top: 40px;
+    padding-bottom: 80px;
 }
 .tv-series-examples .hadding{
     font-size: 38px;
     font-style: normal;
     font-weight: 800;
     line-height: 45px;
+}
+.tv-series-examples .all-image-div{
+    margin-top: 45px;
+}
+.tv-series-examples .all-image-div .row{
+    margin: 0 !important;
+    padding: 0 !important;
+}
+.tv-series-examples .all-image-div .row .col{
+    margin: 0 !important;
+    padding: 25px 15px !important;
+    border: 1px solid rgba(0, 0, 0, 0.50);
+}
+.tv-series-examples .all-image-div .row .col img{
+    max-width: 300px;
+    margin-bottom: 25px;
+}
+.tv-series-examples .all-image-div .row .col:nth-child(odd){
+    background: rgba(80, 193, 172, 0.20);
+}
+.tv-series-examples .all-image-div .row .col:nth-child(even){
+    background: rgba(90, 69, 170, 0.20);
+}
+.tv-series-examples .image-box .hadding{
+    color: #2F3132;
+    font-size: 28px;
+    line-height: 34px;
+}
+.tv-series-examples .image-box p{
+    color: #2F3132;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 30px;
 }
 .random-history{
     background-color: transparent;
@@ -600,14 +633,22 @@ p{
         font-size: 32px;
         line-height: 38px;
     }
+    .tv-series-examples .image-box .hadding {
+        font-size: 24px;
+        line-height: 30px;
+    }
+    .tv-series-examples .image-box p {
+        font-size: 20px;
+        line-height: 25px;
+    }
 }
 @media only screen and (max-width: 768px){
     .banner-section {
         padding-top: 20px;
     }
-    .main-manu .search-box{
+    /* .main-manu .search-box{
         visibility: hidden;
-    }
+    } */
     .main-manu{
         height: auto;
     }
@@ -697,19 +738,19 @@ p{
         height: 4px;
     }
     .main-manu .menu-bar .one {
-        width: 30px;
+        width: 20px;
     }
     .main-manu .menu-bar .three {
-        width: 30px;
+        width: 20px;
     }
     .main-manu .menu-bar .tow {
-        width: 40px;
+        width: 30px;
     }
     .main-manu .menu-bar:hover .one{
-        width: 40px;
+        width: 30px;
     }
     .main-manu .menu-bar:hover .three{
-        width: 40px;
+        width: 30px;
     }
     .hadding {
         font-size: 28px;
@@ -802,8 +843,8 @@ p{
         margin-bottom: 40px;
     }
     .history-banner-section .my-container::after {
-        top: 66px !important;
-        right: 21px !important;
+        top: 60px !important;
+        right: 8px !important;
         height: 40px !important;
         width: 40px !important;
     }
@@ -865,5 +906,31 @@ p{
     .tv-series-examples .hadding {
         font-size: 20px;
         line-height: 26px;
+    }
+    .search-box {
+        padding: 4px 20px;
+    }
+}
+@media only screen and (max-width: 493px){
+    .main-manu {
+        width: calc(100% + 50px);
+        left: 0;
+        margin-left: -28px;
+        border-radius: 0;
+    }
+    .search-box i {
+        display: none;
+    }
+    .search-box input {
+        font-style: 13px;;
+    }
+}
+@media only screen and (max-width: 400px){
+    .tv-series-examples .all-image-div .row .col img {
+        max-width: 250px;
+        margin-bottom: 15px;
+    }
+    .search-box {
+        padding: 4px 5px;
     }
 }
