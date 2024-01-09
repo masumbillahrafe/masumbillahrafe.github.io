@@ -49,7 +49,7 @@ p{
     
 }   
 .popup .popup-top{
-    margin-bottom: 80px;
+    margin-bottom: 30px;
 }
 .popup .popup-top img{
     max-width: 250px;
@@ -99,7 +99,7 @@ p{
     text-transform: uppercase;
     display: block;
     text-align: center;
-    margin-bottom: 54px;
+    margin-bottom: 34px;
     transition: .4s;
 }
 .popup .menu a:hover{
@@ -147,6 +147,33 @@ p{
     border-radius: 50px;
     border: 2px solid #FFF;
     padding: 10px 20px;
+    position: relative;
+}
+.words {
+	position: absolute;
+	background-color: rgba(30, 30, 30, 0.60);
+	padding: 20px;
+	max-width: 100%;
+	width: 34%;
+	top: 183px;
+	left: 58%;
+	transform: translateX(-50%);
+    display: none;
+}
+.words p{
+    color: #fff;
+    transition: .5s;
+}
+.words p:hover{
+    cursor: pointer;
+    font-weight: 700;
+}
+.word-history-words{
+    top: 100px;
+}
+.popup-words{
+    top: 475px;
+    left: 50%;
 }
 .search-box input{
     background-color: transparent;
@@ -505,6 +532,16 @@ p{
 }
 
 @media only screen and (max-width: 992px){
+    .words {
+        width: 42%;
+        top: 100px;
+        left: 58%;
+    }
+    .popup-words {
+        top: 422px;
+        left: 50%;
+        width: 34%;
+    }
     .banner-image{
         width: 390.458px;
         margin-top: 8%;
@@ -643,6 +680,19 @@ p{
     }
 }
 @media only screen and (max-width: 768px){
+    .words {
+        width: 50%;
+        top: 86px;
+        left: 62%;
+    }
+    .popup-words {
+        top: 422px;
+        left: 50%;
+        width: 34%;
+    }
+    .word-history-words {
+        top: 66px;
+    }
     .banner-section {
         padding-top: 20px;
     }
@@ -734,6 +784,11 @@ p{
     }
 }
 @media only screen and (max-width: 576px){
+    .popup-words {
+        top: 391px;
+        left: 50%;
+        width: 90%;
+    }
     .main-manu .menu-bar div {
         height: 4px;
     }
@@ -912,6 +967,20 @@ p{
     }
 }
 @media only screen and (max-width: 493px){
+    .words {
+        width: 80%;
+        top: 82px;
+        left: 50%;
+        z-index: 999;
+    }
+    .popup-words {
+        top: 391px;
+        left: 50%;
+        width: 90%;
+    }
+    .word-history-words {
+        top: 62px;
+    }
     .main-manu {
         width: calc(100% + 50px);
         left: 0;
@@ -926,6 +995,16 @@ p{
     }
 }
 @media only screen and (max-width: 400px){
+    .words {
+        top: 72px;
+    }
+    .word-history-words {
+        top: 52px;
+    }
+    
+    .popup-words {
+        top: 391px;
+    }
     .tv-series-examples .all-image-div .row .col img {
         max-width: 250px;
         margin-bottom: 15px;
