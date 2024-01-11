@@ -403,8 +403,12 @@ p{
     margin-bottom: 32px;
     margin-left: 270px;
 }
-.main-banner .hadding span{
+.main-banner .hadding a{
     color: #4FC0A7;
+    transition: .3s;
+}
+.main-banner .hadding a:hover{
+    color: #5a45aa;
 }
 .main-banner .sound-text{
     color: #4FC0A7;
@@ -413,12 +417,17 @@ p{
     line-height: 42px;
     margin-right: 32px;
     margin-left: 270px;
+    transition: .3s;
+}
+.main-banner .sound-text:hover{
+    color: #5a45aa;
 }
 .history-banner-section .banner-image{
     position: absolute;
     bottom: 0;  
     left: 52%;
     transform: translateX(-50%);
+    z-index: -1;
 }
 .banner-ellipse{
     position: absolute;
@@ -553,6 +562,9 @@ p{
     font-size: 24px;
     font-weight: 400;
     line-height: 30px;
+}
+.hilight {
+    font-weight: 700 !important;
 }
 .random-history{
     background-color: transparent;
@@ -702,6 +714,7 @@ p{
         font-size: 32px;
         line-height: 38px;
         margin-left: 185px;
+        z-index: 999;
     }
     .main-banner .sound-text {
         font-size: 32px;
@@ -752,6 +765,7 @@ p{
         font-size: 20px;
         line-height: 25px;
     }
+   
 }
 @media only screen and (max-width: 768px){
     .words {
