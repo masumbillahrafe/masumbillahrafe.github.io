@@ -781,12 +781,6 @@ p{
     .word-history-words {
         top: 87px;
     }
-    /* .banner-section {
-        padding-top: 20px;
-    } */
-    /* .main-manu .search-box{
-        visibility: hidden;
-    } */
     .main-manu{
         height: auto;
     }
@@ -829,9 +823,6 @@ p{
     .footer p {
         text-align: center;
     }
-    /* .history-banner-section {
-        padding-top: 20px;
-    } */
     .history-banner-section .my-container::after {
         content: "" !important;
         top: 69px !important;
