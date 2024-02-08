@@ -788,6 +788,9 @@ p{
     font-size: 16px;
     line-height: 22px;
   }
+  .sectence-text ul{
+    padding: 0;
+  }
   .tv-examples-section .single-image-arya img {
     width: 100%;
   }
@@ -798,5 +801,11 @@ p{
   }
   .main-menu .search-option .wordpupup {
     width: 230px;
+  }
+  .main-popup .search-option input {
+    width: 100%;
+  }
+  .main-popup .search-option .wordpupup {
+    width: 100%;
   }
 }
