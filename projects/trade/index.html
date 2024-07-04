@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <!-- icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Teade</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="asets/css/bootstrap.min.css">
+</head>
+<body>
+    <!-- top-bar -->
+   <section class="top-bar">
+        <div class="my-container">
+            <a class="topber-link" href="tel:7868420320">
+                <i class="fa-solid fa-phone-volume topber-icon"></i>
+                <span class="topber-text">786-842-0320</span>  
+            </a>
+
+            <span class="devaider">|</span>
+            
+            <a class="topber-link" href="mailto:sales@anncarequipment.com">
+                <i class="fa-regular fa-envelope topber-icon"></i>
+                <span class="topber-text">sales@anncarequipment.com</span>
+            </a>
+        </div>
+   </section>
+   <!-- menu-bar -->
+    <nav>
+        <div class="my-container">
+            <div class="row">
+                <div class="col-xl-3 col-lg-2 col-md-2">
+                  <div class="nav-logo">
+                    <a href="#">
+                        <img src="asets/img/logo-img.png">
+                      </a>
+                  </div>
+                </div>
+                <div class="col-xl-6 col-lg-10 col-md-8 d-flex align-items-center">
+                  <div class="nav-option">
+                    <ul>
+                        <li>
+                            <a class="nav-link" href="#">Home</a>
+                        </li>
+                        <li>
+                            <a class="nav-link" href="#">about</a>
+                        </li>
+                        <li>
+                            <a class="nav-link" href="#">brands</a>
+                        </li>
+                        <li>
+                            <a class="nav-link" href="#">parts</a>
+                        </li>
+                        <li>
+                            <a class="nav-link" href="#">equipment</a>
+                        </li>
+                        <li>
+                            <a class="nav-link" href="#">contact</a>
+                        </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-xl-3 col-lg-3 col-md-3 d-flex align-items-center justify-content-end">
+                  <div class="nav-btn">
+                    <a class="btn">
+                        <img src="asets/img/nav-icon.png">
+                        <span>Need Estimate?</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+        </div>
+    </nav>
+    
+    <!-- banner -->
+    <section class="baner-section">
+        <div class="my-container">
+            <div class="row">
+                <div class="col-xl-6 col-lg-6 col-md-6 d-flex align-items-center">
+                  <div class="header-content-area">
+                    <h1> <span class="yellow-color"> Grow</span> YOUR BUSINESS <span class="bulu-color"> WITH ANNCAR</span> </h1>
+                    <p class="baner-sub-title">HIGH QUALITY HEAVY EQUIPMENT SPARE PARTS SUPPLIER</p>
+                  </div>
+                </div>
+                
+                <div class="col-xl-6 col-lg-6 col-md-6">
+                  <div class="banner-slider-area">
+                    <div class="slider">
+                        <div class="slides">
+                            <img src="asets/img/banner-slid-img-1.png" class="slide" alt="Image 1">
+                            <img src="asets/img/banner-slid-img-2.png" class="slide" alt="Image 2">
+                            <img src="asets/img/banner-slid-img-1.png" class="slide" alt="Image 3">
+                        </div>
+                        <div class="bullets">
+                            <span class="bullet" onclick="changeSlide(0)"></span>
+                            <span class="bullet" onclick="changeSlide(1)"></span>
+                            <span class="bullet" onclick="changeSlide(2)"></span>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+        </div>
+    </section>
+    <!-- why anncar -->
+    <section class="why-anncar">
+      <div class="my-container">
+        <div class="all-cards">
+          <div class="row">
+            <div class="col-xl-4 col-lg-4  col-md-4 col-sm-12">
+              <div class="card-items">
+                <div class="card-headeres">
+                  <img class="card-image" src="asets/img/Fast-risponce-icon.png">
+                  <h2 class="card-heading">Fast Response</h2>
+                </div>
+                <p class="card-text">For most part requests, we answer within 1hr (standard quote response time less than 24hrs).</p>
+              </div>
+            </div>
+            <div class="col-xl-4 col-lg-4  col-md-4 col-sm-12 center-point">
+              <div class="card-items">
+                <div class="card-headeres">
+                  <img class="card-image" src="asets/img/Large-incon.png">
+                  <h2 class="card-heading">Large Availability</h2>
+                </div>
+                <p class="card-text">We offer a wide range of original/genuine and aftermarket parts for Komatsu®, JCB®, and Caterpillar®.</p>
+              </div>
+            </div>
+            <div class="col-xl-4 col-lg-4 col-md-4">
+              <div class="card-items">
+                <div class="card-headeres">
+                  <img class="card-image" src="asets/img/Worldwide-icon.png">
+                  <h2 class="card-heading">Worldwide Shipping</h2>
+                </div>
+                <p class="card-text">We offer a wide range of original/genuine and aftermarket parts for Komatsu®, JCB®, and Caterpillar®.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="why-anncar-area">
+          <div class="row">
+            <div class="col-xl-5 col-lg-5 col-md-5">
+              <div class="image-box">
+                <img src="asets/img/WHY-ANNCAR-img.png">
+              </div>
+            </div>
+            <div class="col-xl-7 col-lg-7 col-md-7 d-flex align-items-center">
+              <div class="contebt-box">
+                <h2 class="heading"> <span class="yellow-color">Why</span> anncar</h2>
+                <p class="text">We have partnered with many suppliers and have the ability to acquire thousands of spare parts for your heavy machinery. By utilizing our large availability of genuine and aftermarket spare parts, and our extensive supplier network, you are sure to find 
+                  the parts you need.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- cards-section -->
+    <section class="cards-section">
+      <div class="my-container">
+        <div class="row">
+          <div class="col-xl-5 col-lg-6 col-md-6">
+            <div class="parents-cards">
+              <img class="card-icon-imag" src="asets/img/card-1-img.png">
+              <h2 class="card-heading">ENGINE <span class="yellow-color">PARTS</span> </h2>
+              <p class="card-texts">Anncar has an extensive coverage of Engine Replacement Parts for Komatsu®, JCB®, Caterpillar®, and other brands. We provide quality solutions to our customers needs and ensure optimum performance and durability in each specific application. LEARN MORE</p>
+            </div>
+          </div>
+          <div class="col-xl-5 col-lg-6 col-md-6">
+            <div class="parents-cards">
+              <img class="card-icon-imag" src="asets/img/card-2-img.png">
+              <h2 class="card-heading">GROUND ENGAGING  <span class="yellow-color">TOOLS</span> </h2>
+              <p class="card-texts">The wear of Ground Engaging Tools (GET) results in high costs, down time and operational inefficiency. Choosing the right Ground Engaging Tools can make a big difference in your operation’s productivity and profitability. Anncar offers a wide range of quality Ground Engaging Tools for a variety of equipment manufactures like CATERPILLAR®, KOMATSU®, and JCB®. LEARN MORE</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-xl-5 col-lg-6 col-md-6">
+            <div class="parents-cards">
+              <img class="card-icon-imag" src="asets/img/card-3-img.png">
+              <h2 class="card-heading">UNDERCARRIAGE <span class="yellow-color">PARTS</span> </h2>
+              <p class="card-texts">Undercarriage parts are usually the most expensive parts when it comes to the maintenance of your crawler equipment. This means you need it done correctly, quickly and at a competitive price. With the help of our experienced Sales Team, we can help you to find the right parts with the highest quality, and get them to you as quickly and economically as possible. LEARN MORE</p>
+            </div>
+          </div>
+          <div class="col-xl-5 col-lg-6 col-md-6">
+            <div class="parents-cards">
+              <img class="card-icon-imag" src="asets/img/card-4-img.png">
+              <h2 class="card-heading">MISC <span class="yellow-color">PARTS</span> </h2>
+              <p class="card-texts">Anncar has a wide range of JCB®, Komatsu®, and Caterpillar® miscellaneous repair and replacement parts. Since we only source from the best and most trusted names in the industry, you can rest assured that we have the right part at the right price and the quality you expect. 
+                LEARN MORE</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--  -->
+    <section class="top-brands">
+      <div class="my-container">
+        <div class="row">
+          <div class="col-xl-6 col-lg-6 col-md-6">
+            <h2 class="brands-main-heading"> we sell the <span class="yellow-color">top brands</span> </h2>
+            <div class="inner-col">
+              <div class="row">
+                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
+                  <h4 class="sub-heading">KOMATSU®</h4>
+                  <p class="brands-text">Anncar is proud to offer the largest selection of genuine and high quality aftermarket Komatsu® parts.</p>
+                </div>
+                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
+                  <h4 class="sub-heading">JCB®</h4>
+                  <p class="brands-text">Anncar offers a wide range of genuine and aftermarket parts to minimize the downtime of your machine.</p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
+                  <h4 class="sub-heading">CAT®</h4>
+                  <p class="brands-text">Buy genuine or aftermarket parts, engine parts and other common repair parts to avoid down time.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-6 col-lg-6 col-md-6">
+            <div class="imgs-div">
+              <img class="befor-img" src="asets/img/sell-img-2.png">
+              <img class="after-img" src="asets/img/sell-img-1.png">
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- your-need-section -->
+    <section class="your-need-section">
+      <div class="my-container">
+        <img src="asets/img/need-img.png">
+        <div class="need-text-box">
+          <h2 class="needs-heading">We have the part <span class="yellow-color">you need</span></h2>
+            <p class="need-text"> We offer a vast selection of new aftermarket, rebuilt and used parts for Caterpillar®, Komatsu®, JCB® and other popular heavy equipment manufacturers.</p>
+            <button>Request Part</button>
+          </h2>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div class="my-container">
+        <div class="logo-box">
+          <img class="footer-logo" src="asets/img/logo-img.png">
+        </div>
+        <div class="row">
+          <div class="col-xl-3 col-lg-3 col-md-6">
+            <h3 class="fooer-heading">GROW WITH ANNCAR</h3>
+            <p class="footer-text">We are dedicated to the sales of heavy machinery spare parts for KOMATSU ®, JCB ®, and CATERPILLAR </p>
+            <div class="mediya">
+              <i class="fa-brands fa-square-facebook"></i>
+              <i class="fa-brands fa-square-instagram"></i>
+              <i class="fa-brands fa-square-twitter"></i>
+              <i class="fa-brands fa-linkedin"></i>
+            </div>
+          </div>
+          <div class="col-xl-3 col-lg-3 col-md-6">
+            <h3 class="fooer-heading">Get In Touch</h3>
+            <a class="footer-link" href="#"><i class="fa-solid fa-phone-volume"></i> +1 786.842.0320</a>
+            <a class="footer-link" href="#"><i class="fa-regular fa-envelope"></i> sales@anncarequipment.com</a>
+            <a class="footer-link" href="#"><i class="fa-solid fa-location-dot"></i> 7275 NW 68th Street, Bay #9
+              Miami, FL 33166</a>
+          </div>
+          <div class="col-xl-3 col-lg-3 col-md-6">
+            <h3 class="fooer-heading">Useful Links</h3>
+            <a class="footer-link" href="#">Engine Parts</a>
+            <a class="footer-link" href="#">Ground Engaging Tools</a>
+            <a class="footer-link" href="#">Undercarriage Parts</a>
+            <a class="footer-link" href="#">Miscellaneous Parts</a>
+          </div>
+          <div class="col-xl-3 col-lg-3 col-md-6">
+            <h3 class="fooer-heading">Get Free Estimate</h3>
+            <p class="footer-text">Fill out the form below and request a free and secure quote.</p>
+            <button>Request A Quote</button>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <section class="copy-write">
+      <p>Copyright ©tradella international 2020</p>
+    </section>
+    <script src="asets/js/bootstrap.min.js"></script>
+    <script src="asets/js/custom.js"></script>
+</body>
+</html>
