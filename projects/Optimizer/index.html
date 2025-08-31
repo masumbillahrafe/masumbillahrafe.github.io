@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Image Optimizer with HEIC Support</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      text-align: center;
+    }
+
+    input, select, button {
+      margin: 10px 0;
+      padding: 10px;
+      width: 100%;
+      font-size: 16px;
+    }
+
+    .preview-container {
+      margin: 20px 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .image-box {
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      padding: 10px;
+      max-width: 250px;
+    }
+
+    .image-box img {
+      max-width: 100%;
+      max-height: 200px;
+      border-radius: 6px;
+    }
+
+    .info-block {
+      font-size: 14px;
+      margin: 10px 0;
+    }
+
+    .spinner {
+      width: 30px;
+      height: 30px;
+      border: 4px solid #ccc;
+      border-top: 4px solid #007bff;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+      margin: 0 auto;
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    .download-btn {
+      display: inline-block;
+      margin-top: 10px;
+      background-color: #28a745;
+      color: white;
+      font-weight: bold;
+      border: none;
+      padding: 8px 12px;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+
+    #convertBtn {
+      background-color: #007bff;
+      color: white;
+      font-weight: bold;
+      border: none;
+      cursor: pointer;
+    }
+  </style>
+
+  <!-- HEIC to JPEG converter -->
+  <script src="https://cdn.jsdelivr.net/npm/heic2any@0.0.3/dist/heic2any.min.js"></script>
+</head>
+<body>
+
+  <h2>Multi Image Optimizer (with HEIC Support)</h2>
+
+  <input type="file" id="imageInput" accept="image/*,.heic" multiple>
+
+  <select id="formatSelect">
+    <option value="image/png">PNG</option>
+    <option value="image/jpeg">JPG</option>
+    <option value="image/webp">WEBP</option>
+  </select>
+
+  <button id="convertBtn">Convert All</button>
+
+  <div class="preview-container" id="previewContainer"></div>
+
+  <script>
+    const imageInput = document.getElementById('imageInput');
+    const formatSelect = document.getElementById('formatSelect');
+    const convertBtn = document.getElementById('convertBtn');
+    const previewContainer = document.getElementById('previewContainer');
+
+    let images = [];
+
+    function formatBytes(bytes) {
+      if (bytes >= 1073741824) return (bytes / 1073741824).toFixed(2) + ' GB';
+      if (bytes >= 1048576) return (bytes / 1048576).toFixed(2) + ' MB';
+      if (bytes >= 1024) return (bytes / 1024).toFixed(2) + ' KB';
+      return bytes + ' B';
+    }
+
+    imageInput.addEventListener('change', async function () {
+      images = Array.from(imageInput.files);
+      previewContainer.innerHTML = '';
+
+      for (let index = 0; index < images.length; index++) {
+        const file = images[index];
+        const fileType = file.type;
+        const box = document.createElement('div');
+        box.classList.add('image-box');
+
+        const infoId = `info_${index}`;
+        const imgId = `img_${index}`;
+        const spinnerId = `spinner_${index}`;
+        const downloadId = `download_${index}`;
+        let imageURL = '';
+
+        if (fileType === 'image/heic' || file.name.toLowerCase().endsWith('.heic')) {
+          try {
+            const convertedBlob = await heic2any({
+              blob: file,
+              toType: 'image/jpeg',
+              quality: 0.8
+            });
+            imageURL = URL.createObjectURL(convertedBlob);
+            images[index] = new File([convertedBlob], file.name.replace(/\.heic/i, '.jpg'), { type: 'image/jpeg' });
+          } catch (error) {
+            console.error('HEIC conversion failed:', error);
+            continue;
+          }
+        } else {
+          imageURL = URL.createObjectURL(file);
+        }
+
+        box.innerHTML = `
+          <img src="${imageURL}" id="${imgId}" alt="Image Preview">
+          <div class="info-block" id="${infoId}">Original Size: ${formatBytes(file.size)}</div>
+          <div class="spinner" id="${spinnerId}" style="display:none;"></div>
+          <a id="${downloadId}" class="download-btn" style="display:none;" download>Download</a>
+        `;
+
+        previewContainer.appendChild(box);
+      }
+    });
+
+    convertBtn.addEventListener('click', function () {
+      const selectedFormat = formatSelect.value;
+      const quality = 0.6;
+
+      images.forEach((file, index) => {
+        const reader = new FileReader();
+
+        reader.onload = function (e) {
+          const img = new Image();
+          img.src = e.target.result;
+
+          img.onload = function () {
+            const canvas = document.createElement('canvas');
+            canvas.width = img.width;
+            canvas.height = img.height;
+
+            const ctx = canvas.getContext('2d');
+            ctx.drawImage(img, 0, 0);
+
+            document.getElementById(`spinner_${index}`).style.display = 'block';
+
+            setTimeout(() => {
+              const dataURL = canvas.toDataURL(selectedFormat, quality);
+              const optimizedSize = Math.round((dataURL.length * (3 / 4)));
+
+              const reduction = (((file.size - optimizedSize) / file.size) * 100).toFixed(2);
+
+              document.getElementById(`info_${index}`).innerHTML = `
+                Original Size: ${formatBytes(file.size)}<br>
+                Optimized Size: ${formatBytes(optimizedSize)}<br>
+                Reduced by: ${reduction}%
+              `;
+
+              const downloadLink = document.getElementById(`download_${index}`);
+              downloadLink.href = dataURL;
+
+              const fileExt = selectedFormat.split('/')[1];
+              const fileNameWithoutExt = file.name.substring(0, file.name.lastIndexOf('.')) || file.name;
+              downloadLink.download = `${fileNameWithoutExt}_optimized.${fileExt}`;
+              downloadLink.style.display = 'inline-block';
+
+              document.getElementById(`spinner_${index}`).style.display = 'none';
+              document.getElementById(`img_${index}`).src = dataURL;
+            }, 300);
+          };
+        };
+
+        reader.readAsDataURL(file);
+      });
+    });
+  </script>
+
+</body>
+</html>
