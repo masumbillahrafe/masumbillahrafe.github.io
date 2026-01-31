@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Image Trail Effect</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zalando+Sans+Expanded:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+ <link rel="stylesheet" href="style.css">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+
+</head>
+
+<body>
+  <section>
+    <div>
+      <h1>Image Trail Effect</h1>
+      <p>Masum Billah Rafe</p>
+    </div>
+    
+  </section>
+
+  <script src="script.js"></script>
+
+
+</body>
+</html>
+
+
+
+
+
+<!-- Wordpress a use korar jonno 
+ 
+ -> Add a Container 
+ -> Add Container class name "image-effect" 
+ -> copy the CSS and pest Custom CSS option 
+ -> then add HTML element 
+ -> copy script code and pest in html -> Thene publish.  
+ -> Must Be add GSAP link.**
+ -->
+ 
+
+<!-- GSAP -->
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+
+<style>
+.image-effect{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.image-effect .trail{
+  position: absolute;
+  width: 250px;
+  height: 300px;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  will-change: transform, opacity;
+  z-index: 10;
+}
+
+.image-effect .trail img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+</style>
+
+<script>
+(function(){
+
+  const container = document.querySelector(".image-effect");
+  if(!container) return;
+
+  const images = [
+    "https://clbs.demo-techcilo.com/wp-content/uploads/2025/12/Property-1Variant18_optimized.webp",
+    "https://clbs.demo-techcilo.com/wp-content/uploads/2025/12/Property-1Variant14_optimized.webp",
+    "https://clbs.demo-techcilo.com/wp-content/uploads/2025/12/Property-1Variant9_optimized.webp",
+    "https://clbs.demo-techcilo.com/wp-content/uploads/2025/12/Property-1Variant15_optimized.webp",
+    "https://clbs.demo-techcilo.com/wp-content/uploads/2025/12/Property-1Variant10_optimized.webp",
+    "https://clbs.demo-techcilo.com/wp-content/uploads/2025/12/Property-1Variant13_optimized.webp",
+    "https://clbs.demo-techcilo.com/wp-content/uploads/2025/12/Property-1Variant17_optimized.webp",
+    "https://clbs.demo-techcilo.com/wp-content/uploads/2025/12/Property-1Variant16_optimized.webp",
+    "https://clbs.demo-techcilo.com/wp-content/uploads/2025/12/Property-1Variant5_optimized.webp",
+    "https://clbs.demo-techcilo.com/wp-content/uploads/2025/12/Property-1Default_optimized.webp"
+  ];
+
+  let lastX = 0;
+  let lastY = 0;
+  let lastTime = 0;
+  let imgIndex = 0;
+
+  const DISTANCE_LIMIT = 150;
+  const TIME_LIMIT = 80;
+
+  function distance(x1, y1, x2, y2){
+    return Math.hypot(x2 - x1, y2 - y1);
+  }
+
+  container.addEventListener("mousemove", (e) => {
+    const rect = container.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+
+    const now = Date.now();
+    const movedEnough = distance(lastX, lastY, x, y) > DISTANCE_LIMIT;
+    const timePassed = now - lastTime > TIME_LIMIT;
+
+    if(!movedEnough || !timePassed) return;
+
+    lastX = x;
+    lastY = y;
+    lastTime = now;
+
+    const trail = document.createElement("div");
+    trail.className = "trail";
+
+    const img = document.createElement("img");
+    img.src = images[imgIndex];
+    imgIndex = (imgIndex + 1) % images.length;
+
+    trail.appendChild(img);
+    container.appendChild(trail);
+
+    gsap.set(trail, {
+      x: x,
+      y: y,
+      scale: 0.6,
+      opacity: 0
+    });
+
+    gsap.to(trail, {
+      opacity: 1,
+      scale: 1,
+      duration: 0.3,
+      ease: "power2.out"
+    });
+
+    gsap.to(trail, {
+      opacity: 0,
+      scale: 1.4,
+      duration: 0.6,
+      delay: 0.25,
+      ease: "power2.out",
+      onComplete: () => trail.remove()
+    });
+
+  });
+
+})();
+</script> -->
